@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>prime</title>
+<script>
+				function arr()
+				{
+					let num1=document.getElementById("num").value;
+					let num2=num1.split(" ");
+					let str="prime numbers..."
+					for (let i=0;i<num2.length;i++)
+					{
+						let n1=num2[i];
+						let flag=1;
+						for (let j=2;j<n1;j++)
+						{
+							if(n1%j==0)
+							flag=0;
+						}
+						if(flag==1)
+						{
+							str=(str+" "+n1)
+							console.log(str);
+						}
+							
+					}
+					
+					document.getElementById("p").innerHTML=str;
+					
+				}
+				function pal()
+				{
+					let str=document.getElementById("num").value;
+					let j=str.length-1
+					let flag=true
+					for(let i=0;i<str.length/2;i++)
+						{
+							if(str[i]!=str[j])
+								{
+									flag=false;
+								}
+							j--
+						}		
+					if(flag==true)
+					document.getElementById("q").innerHTML=str + " IS PALINDROME";
+					else
+					document.getElementById("q").innerHTML=str + " IS NOT PALINDROME";
+					
+					
+				}
+					
+				
+</script>
+</head>
+<body>
+		<label>ENTER NUMBER</label>
+		<input id="num" type="text">
+		<input type="submit" onclick="arr()" value="submit">
+		<button type="button" onclick="pal()" value="button">PALINDROME</button>
+		<p id="p"></p>
+		<p id="q"></p>
+
+</body>
+</html>
+

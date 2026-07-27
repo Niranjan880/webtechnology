@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>TIME</title>
+</head>
+<body>
+<p id="time">TIME</p>
+<p id="date">DATE</p>
+<button onclick="showDate()">Show Date</button>
+<script>
+function showDate() {
+    let today = new Date();
+    document.getElementById("time").innerHTML = today.toLocaleTimeString();
+    document.getElementById("date").innerHTML = today.toDateString();
+    
+}
+</script>
+
+</body>
+</html>
